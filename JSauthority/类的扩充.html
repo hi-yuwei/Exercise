@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的扩充</title>
+<!--    <script type="text/javascript">
+       var person={
+           name:"beck",
+           age:28,
+           say:function(){
+               return "大家好,我是"+this.name+";年龄："+this.age;
+           }
+       };
+
+       person.prototype={
+           abc:function(){
+               return this.name;
+           }
+       }
+        var robot=Object.create(person);
+        robot.name="阿尔法Go";
+        robot.age=1;
+        console.log(robot.say());   //继承了其原型person的方法
+       //console.log(robot.birthplace());    报错
+
+
+       console.log(robot.abc());
+    </script>-->
+    <script>
+        function Person(a,b){
+            this.name=a;
+            this.age=b;
+            var say=function(){
+                return this.name+this.age;
+            }
+        }
+
+        var robot=new Person("beck",28);
+        console.log(robot.say);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

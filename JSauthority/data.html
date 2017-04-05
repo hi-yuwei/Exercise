@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+    <script>
+        window.onload = function () {
+            var attrs = document.getElementsByClassName("bx")[0].attributes;
+            for (var i = 0; i < attrs.length; i++) {
+                console.log(attrs[i]);
+                //class="bx"
+                //id="txt"
+                //scss="background:#333;color:#000;"
+                //name="beck"
+                //age="28"
+                //width="178"
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="bx" id="txt" style="background: #333;color:#000;" data-name="beck" data-age="28" data-width="178"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+input, button {
+  outline: none !important; }
+
+.query-box {
+  background: #F0F0F0; }
+  .query-box .query-box-time input {
+    display: inline;
+    width: 43%; }
+  .query-box .query-box-btn {
+    line-height: 118px;
+    text-align: center; }

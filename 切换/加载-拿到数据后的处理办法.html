@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加载</title>
+</head>
+<body>
+<ul class="list">
+
+</ul>
+</body>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>
+<script>
+    $(function () {
+        var json = {success: true, data: ['杭州', '广东', '上海', '天津', '深圳', '北京', '湖南', '河北', '山东', '四川']};
+        if (json.success) {
+            var str = '';
+            for (var i = 0; i < json.data.length; i++) {
+                str += "<li>" + json.data[i] + "</li>";
+            }
+            $('.list').append(str);
+        }
+    })
+</script>
+</html>

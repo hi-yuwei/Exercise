@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+ul li {
+  position: relative;
+  margin-bottom: 20px;
+  width: 200px;
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #000; }

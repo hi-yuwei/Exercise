@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数定义类</title>
+    <script>
+        function Range(from,to){
+            this.from=from;
+            this.to=to;
+        }
+        Range.prototype={
+            includes:function(x){
+                return this.from<=x&&x<=this.to;
+            },
+            foreach:function(f){
+                for(var x=Math.ceil(this.from);x<this.to;x++){
+                    f(x);
+                }
+            },
+            toString:function(){return ""}
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

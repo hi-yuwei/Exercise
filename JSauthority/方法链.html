@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法链</title>
+    <script type="text/javascript">
+        var person={
+            name:"beck",
+            age:27,
+            height:"65kg",
+            say:function(){
+                console.log(this.name); //beck
+                return this;
+            },
+            chi:function(){
+                console.log(this.age);  //27
+                return this;
+            }
+        }
+        person.say().chi();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

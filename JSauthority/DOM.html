@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>1</p>
+    567
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <!--说明-->
+    <p>5</p>
+    123
+    <div>234</div>
+    <p></p>
+</div>
+</body>
+<script>
+    /*        var parentNode=document.body;
+     var nodes=parentNode.getElementsByTagName("p");
+     var reverse=Array.prototype.map.call(nodes,function(x){
+     return parseInt(x.innerText)*10;
+     })
+     console.log(reverse);
+
+     console.log(document.getElementsByTagName("p")[0].nodeType);
+     console.log(document.getElementsByTagName("p")[0].nextSibling.nodeType);*/
+
+    var parentChild = document.getElementsByTagName("div")[0];
+    console.log([].push(parentChild.children));
+//    console.log(parentChild.children)
+//    console.log(parentChild.children.length);
+/*    add.count = 0;
+    function add(nodes) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].nodeType !== 3) {
+                if (nodes[i].nodeType !== 8) {
+                    add.count++;
+                }
+            }
+        }
+        return add.count;
+    }
+    console.log(add(parentChild.childNodes));*/
+</script>
+</html>

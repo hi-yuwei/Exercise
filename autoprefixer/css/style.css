@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-transform: translate(-50% -50%) rotate(-45deg);
+    transform: translate(-50% -50%) rotate(-45deg);
+    border: 1px solid #000;
+}
+
+.box div {
+    width: 100%;
+    height: 120px;
+    background: red;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: translate(-40% -40%) rotate(-45deg) skew(45deg);
+    transform: translate(-40% -40%) rotate(-45deg) skew(45deg);
+}
+
+i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}

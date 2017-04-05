@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的属性</title>
+    <!--<script>-->
+        <!--add.count=0;    //因为函数声明式会被提前声明，所以这里直接可以定义其属性-->
+        <!--function  add(){-->
+            <!--for(var i=0;i<5;i++){-->
+                <!--add.count+=i;-->
+            <!--}-->
+            <!--return add.count;-->
+        <!--}-->
+        <!--console.log(add()); //10-->
+
+        <!--function multiply(x){-->
+            <!--return x*add.count;-->
+        <!--}-->
+        <!--console.log(multiply(5));   //50-->
+    <!--</script>-->
+
+
+    <!--<script>-->
+        <!--(function(x){-->
+            <!--console.log(x);-->
+        <!--}(5));-->
+        <!--(function add(y){-->
+            <!--console.log(y*y);-->
+        <!--}(6))-->
+    <!--</script>-->
+<!--    <script>
+        function add(){
+            var sum=function(){
+                console.log(123);
+            }
+            return sum;
+        }
+        console.log(add()())
+    </script>-->
+    <script>
+        var x=1;
+        function a(){
+            var x=2;
+            function b(){
+                return x;
+            }
+            return b;
+        }
+        console.log(a());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

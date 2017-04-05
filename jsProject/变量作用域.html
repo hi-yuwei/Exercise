@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+</head>
+<body>
+    <script>
+        var y=2;
+
+        function add() {
+            var x=0;
+            console.log(x); //有效
+            console.log(y); //有效
+        }
+        add();
+
+        console.log(y); //有效,目前y还在其定义的作用域中
+        console.log(x); //报错,x只在其定义的作用域中有效
+
+    </script>
+</body>
+</html>

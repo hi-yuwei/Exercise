@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+    <script>
+        var r, arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+        r = arr.filter(function (element, index, self) {
+            console.log("indexof:"+self.indexOf(element)+";"+index);
+            // return self.indexOf(element) === index;
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

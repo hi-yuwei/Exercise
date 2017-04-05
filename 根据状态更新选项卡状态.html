@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>根据状态更新选项卡状态</title>
+    <script src="//cdn.bootcss.com/jquery/1.10.0/jquery.js"></script>
+    <script>
+        /*
+         * 先将原始title保存,监听window的focus和blur事件,根据不同状态不同赋值。
+         * */
+        $(function () {
+            var oldTitle = document.title;
+            $(window).focus(function () {
+                document.title = oldTitle;
+            }).blur(function () {
+                document.title = 'hi,click me!'
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

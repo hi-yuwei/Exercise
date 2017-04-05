@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提取url参数</title>
+    <script>
+        function getArgs(url) {
+            //如果url没有参数返回undefined
+            if (url.indexOf("?") !== -1) {
+                var url = url.substr(1);    //获得?后面的参数
+                var obj = [];
+                var args = url.split("&");
+                for (var i = 0, len = args.length; i < len; i++) {
+                    var pos = args[i].indexOf("=");
+                    if (pos === -1) {
+                        continue;   //跳出循环
+                    }
+                    obj.push(args[i].substr(pos + 1));
+                }
+                return obj;
+            }
+        }
+        console.log(getArgs(location.search));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

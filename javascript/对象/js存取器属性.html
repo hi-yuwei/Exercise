@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js存取器属性</title>
+    <script type="text/javascript">
+        var x = {
+            name: "xiaowang",   //普通属性
+            age: 28,
+            //存取器属性
+            get r(){
+                //get,set当做对象的方法，故this指向当前对象
+                return this.name+this.age;
+            },
+            set r(value){
+                if(value){
+                    this.name=value;
+                }
+            }
+        };
+        x.r="小明";   //设置
+        console.log(x.r);   //读取
+
+        //y继承x对象
+        var y=Object.create(x);
+        y.r="小红";   //修改存取器属性
+        console.log(y.r);   //小红28
+        console.log(x.r)    //小明28，继承对象对属性的修改，对原型对象没有影响
+    </script>
+</head>
+<body>
+
+</body>
+</html>

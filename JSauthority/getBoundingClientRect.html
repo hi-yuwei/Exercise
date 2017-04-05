@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getBoundingClientRect</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            height: 2000px;
+            background: cornflowerblue;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .txt {
+            height: 1500px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">滚动</button>
+    <div id="box" class="box"></div>
+    <p id="con">Hello,world!</p>
+    <div class="txt" id="txt"></div>
+    <script>
+       var elem=document.getElementById('txt').getBoundingClientRect();
+        console.log(elem);
+//       window.onscroll=function(){
+//           var elem=document.getElementById('txt').getBoundingClientRect();
+//           console.log(elem.top);
+//       }
+       /*  window.scrollTo(0,elem.top);*/
+//        document.getElementById('btn').onclick=function(){
+//            document.getElementById('con').scrollIntoView(true);
+//        }
+    </script>
+</body>
+</html>

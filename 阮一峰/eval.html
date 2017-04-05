@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // eval('var x=2+9');
+        // console.log(x); //11
+    </script>
+
+    <script>
+        // var x = 8;
+        // eval('var x=10');
+        // console.log(x);
+    </script>
+
+    <script>
+        // // eval命令声明的变量不能再其外被访问
+        // function fun() {
+        //     'use strict'
+        //     eval('var y=10');
+        //     console.log(y); //Uncaught ReferenceError: y is not defined
+        // }
+        // fun();
+
+        // // eval内读写当前作用域的变量
+        // function fun2() {
+        //     'use strict'
+        //     var y = 2;
+        //     eval('y=5');
+        //     console.log(y); //5;
+        // }
+        // fun2();
+    </script>
+
+    <script>
+        var x=5;
+        function fun(){
+            var x=8;
+            var e=eval;
+            e('console.log(x)');    //5
+
+            eval('console.log(x)');
+        }
+        fun();
+
+    </script>
+</body>
+
+</html>

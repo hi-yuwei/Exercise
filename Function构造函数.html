@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var say=new Function(
+            'x',
+            'y',
+            'return x+y'
+        )
+        console.log(say(1,2));  //3
+
+        //等同于
+        function say(x,y){
+            return x+y;
+        }
+        console.log(say(1,2));  //3
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

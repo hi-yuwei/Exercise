@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var obj={};
+        var newObj=obj;
+
+        obj.name='对象';
+        console.log(newObj.name);   //'对象'
+
+        newObj.age=29;
+        console.log(obj.age);   //29
+
+        newObj=2;
+        console.log(obj);   //{name: "对象", age: 29}
+        console.log("newObj:"+newObj);  //2
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

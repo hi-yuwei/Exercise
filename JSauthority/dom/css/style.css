@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: #000;
+  color: red; }

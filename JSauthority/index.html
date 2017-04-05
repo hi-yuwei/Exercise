@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getBoundingClientRect</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .box {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="gap"></div>
+<div class="box" id="box">
+
+</div>
+<script>
+    console.log(document.getElementById('box').getBoundingClientRect());    //包含top,left,bottom,right,width,height等信息的对象
+    console.log(document.getElementById('box').getBoundingClientRect().left);   //100
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete的副作用</title>
+    <script type="text/javascript">
+        var arr=[9,10,43,24];
+        delete arr[1];
+        console.log(10 in arr)  //flase，10在数组中已被删除
+        console.log(arr.length) //4，这就是delete的副作用，delete只删除了数组的元素，并未对数组长度做修改
+    </script>
+</head>
+<body>
+
+</body>
+</html>

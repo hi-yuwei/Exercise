@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>documentFragment</title>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var temp = document.createDocumentFragment();
+                var elms = document.getElementById('item-list');
+                while (elms.lastChild) {
+                    temp.appendChild(elms.lastChild);
+                }
+                document.getElementById('item-list').appendChild(temp);
+            }
+        }
+
+    </script>
+</head>
+<body>
+<ul id="item-list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<button id="btn">倒序</button>
+</body>
+</html>

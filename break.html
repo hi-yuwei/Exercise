@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        returnFor:
+        for(var i=0,len=3;i<len;i++){
+            console.log("i:"+i);    //0,1,2
+
+            for(var j=0,jLen=3;i<jLen;j++){
+                if(j===1){
+                    break returnFor;
+                }
+                console.log("j:"+j);    //0,0,0
+            }
+            
+        }
+    </script>
+
+    <!--<script>
+        for (var i = 1, len = 5; i < len; i++) {
+            if (i === 3) {
+                continue;
+            }
+            console.log(i); //1,2,4
+        }
+    </script>-->
+</head>
+
+<body>
+
+</body>
+
+</html>

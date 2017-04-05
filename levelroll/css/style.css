@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+body{
+    background:#f0f0f0;
+}
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.levelroll {
+    width: 1000px;
+    margin: 0 auto;
+    background: #f0f0f0;
+}
+.on a{
+    background: #4472c4;
+    color:#fff;
+}
+
+.levelroll .levelroll-head {
+    padding:10px 0;
+    height: 38px;
+    border-bottom: 2px solid #000;
+}
+.levelroll .levelroll-head h2{
+    font-size:18px;
+}
+.levelroll .levelroll-head div{
+    position: relative;
+}
+.levelroll .levelroll-head div .licurrent{
+    position: absolute;
+    bottom:-13px;
+    left:30px;
+    width:96px;
+    height:2px;
+    background: red;
+}
+.levelroll .levelroll-head ul li {
+    float: left;
+    margin-left:30px;
+    cursor: pointer;
+}
+.levelroll .levelroll-head ul li a{
+    display: block;
+    padding:8px;
+    transition: all .5s linear;
+}
+.levelroll .levelroll-body{
+    position: relative;
+    overflow: hidden;
+}
+.levelroll .levelroll-body .imgs-box{
+    position:relative;
+    top:0;
+    left:0;
+}
+.levelroll .levelroll-body .cargo-img{
+    position: relative;
+    top:0;
+    left:0;
+    float:left;
+    /*display: none;*/
+}
+.levelroll .levelroll-body .showImg{
+    display: block;
+}
+.levelroll .levelroll-body .cargo-img div{
+    position: relative;
+    float: left;
+    margin-left:20px;
+    cursor: pointer;
+}
+.levelroll .levelroll-body .cargo-img div span{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    font-size:12px;
+    color:#fff;
+    text-align: center;
+    text-decoration: underline;
+    background: #646464;
+    transition: all .5s ease;
+}
+.levelroll .levelroll-body .showImg .onspan span{
+    background: red;
+
+
+}
+.levelroll .levelroll-body .cargo-img div:first-child{
+    margin-left:0;
+}
+.levelroll .levelroll-body .btn a{
+    position: absolute;
+    top:50%;
+    width:50px;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    background:green;
+    color:#fff;
+    transform: translateY(-50%);
+}
+.levelroll .levelroll-body .btn a:first-child{
+    left:5px;
+}
+.levelroll .levelroll-body .btn a:last-child{
+    right:5px;
+}

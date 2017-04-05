@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!--引入angular.js包-->
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app>
+        <!--有效-->
+        <input type="text" ng-model="test"/>
+        <!--有效-->
+        <textarea ng-model="con"></textarea>
+        <!--无效-->
+        <!--<p ng-model="test">world</p>-->
+        <h2>Hello,{{test}}</h2>
+        <p>注意：<strong>{{con}}</strong></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+$red:red;
+$blue:blue;
+div {
+    color: $red;
+    background: $blue;
+}

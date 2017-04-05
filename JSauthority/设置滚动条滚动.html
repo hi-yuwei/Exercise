@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置滚动条滚动</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div.box {
+            height: 1000px;
+        }
+
+        .box1 {
+            background: palevioletred;
+        }
+
+        .box2 {
+            background: cornflowerblue;
+        }
+
+        .box3 {
+            background: orange;
+        }
+
+        .box4 {
+            background: darkgreen;
+        }
+
+        .box5 {
+            background: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<div class="box box5"></div>
+<script>
+    var timer = setTimeout(function () {
+        window.scrollTo(0, 1000); //滚动到1000的位置
+        window.scroll(0,500)    //滚动到500的位置
+    }, 2000)
+</script>
+</body>
+</html>

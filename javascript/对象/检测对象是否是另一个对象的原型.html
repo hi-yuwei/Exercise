@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测对象是否是另一个对象的原型</title>
+    <script type="text/javascript">
+        var x={};
+        var y=Object.create(x);
+        console.log(Object.prototype.isPrototypeOf(x)); //true，对象x继承与内置对象Object
+        console.log(x.isPrototypeOf(y));    //true,y继承与x
+        console.log(Object.prototype.isPrototypeOf(y)); //true,y继承x，x继承内置Object
+    </script>
+</head>
+<body>
+
+</body>
+</html>

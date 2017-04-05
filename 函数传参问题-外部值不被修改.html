@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参问题-外部值不被修改</title>
+    <script type="text/javascript">
+        function add(arg){
+            arg=18;
+        }
+        var arg=28;
+        console.log(arg);   //28
+
+        add(arg);
+        console.log(arg);   //28
+    </script>
+</head>
+<body>
+
+</body>
+</html>

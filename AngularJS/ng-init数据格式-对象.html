@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-init数据格式</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <!--对象-->
+    <div ng-app ng-init="person={name:'beck',age:28,width:176,height:'65kg'}">
+        <p ng-bind="'姓名:'+person.name+';年龄:'+person['age']+';身高:'+person.width+';体重:'+person.height"></p>
+    </div>
+</body>
+</html>

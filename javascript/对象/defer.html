@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>defer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+<body>
+    <div class="defer-box"></div>
+    <div class="defer-box"></div>
+    <!--当遇到js文件时会暂停dom的渲染，立即下载js-->
+    <script type="text/javascript" src="../js/defer-js.js"></script>
+    <!--当遇到js文件时不会暂停dom的渲染，同时也会下载js-->
+    <!--<script async type="text/javascript" src="./js/defer-js.js"></script>-->
+    <!--当遇到js文件时不会立即下载js，等dom渲染完毕后再下载执行-->
+    <!--<script defer type="text/javascript" src="./js/defer-js.js"></script>-->
+    <div class="defer-box green"></div>
+    <div class="defer-box"></div>
+    <div class="defer-box"></div>
+</body>
+</html>

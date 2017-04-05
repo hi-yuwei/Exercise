@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当倒计时加在按钮上时</title>
+    <style type="text/css">
+        body {
+            font: 14px/150% Microsoft YaHei;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin: 100px 0;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            background: rgba(0, 0, 0, .1);
+        }
+
+        a.btn {
+            background: rgba(0, 0, 0, .7);
+            color: #fff;
+        }
+    </style>
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var flg = true; //标记是否已开始倒计时
+            var fun = function (e) {
+                if (flg) {
+                    flg = false;
+                    e.preventDefault();
+                    var send = 10, timer, _this;
+                    _this = $(this);
+                    _this.addClass("btn");
+                    var countDown = function () {
+                        if (--send) {
+                            _this.html(send + "S后重新获取");
+                        } else {
+                            clearInterval(timer);
+                            _this.html("获取验证码");
+                            _this.toggleClass("btn");
+                            flg = true;
+                        }
+                    }
+                    timer = setInterval(countDown, 500);
+                } else {
+                    return false;
+                }
+            }
+            $("a").on('click', fun);
+
+        });
+    </script>
+</head>
+<body>
+<a href="javascript:;">获取验证码</a>
+</body>
+</html>

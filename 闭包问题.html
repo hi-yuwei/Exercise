@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套函数this指向问题</title>
+    <script type="text/javascript">
+        var name=2;
+        function add(){
+            var name=3;
+            console.log(this.name); //2   函数中this指向全局对象（window）,window.name为2
+            say();
+            function say(){
+                console.log(this.name); //2 嵌套函数的this也是指向全局对象，故也是2
+            }
+        }
+        add();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

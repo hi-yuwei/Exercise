@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04、应用</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="link">
+        <input type="text" ng-model="firstname"/>
+        <input type="text" ng-model="lastname"/>
+        <p>{{firstname+""+lastname}}</p>
+    </div>
+    <script>
+        //  模块
+        var app = angular.module('myapp', []);
+        // 控制器
+        app.controller('link', function ($scope) {
+            $scope.firstname = 'beck';
+            $scope.lastname = 'yu';
+        })
+    </script>
+</body>
+</html>

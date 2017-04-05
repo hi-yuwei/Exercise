@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取属性的特性</title>
+    <script type="text/javascript">
+        var x = {
+            name: "beck",
+            age: 27,
+            get b() {
+                return "2";
+            },
+            get r() {
+                return this.name + this.age;
+            },
+            set r(value) {
+                name = name || value;
+            }
+        };
+        var y = Object.create(x);
+        //数据属性返回：Object {value: "beck", writable: true, enumerable: true, configurable: true}
+        console.log(Object.getOwnPropertyDescriptor(x, "name"));
+        //存取器属性返回：Object {get:function r(),set:function r(value), enumerable: true, configurable: true}
+        console.log(Object.getOwnPropertyDescriptor(x, "r"));
+        //存取器属性返回：Object {get:function r(),set:undefined, enumerable: true, configurable: true}
+        console.log(Object.getOwnPropertyDescriptor(x, "b"));
+        //对继承的属性和不存在的属性返回undefined
+        console.log(Object.getOwnPropertyDescriptor(y, "name"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

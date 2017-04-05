@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+//        'use strict';
+         var pattern=(function () {
+             return !this;
+         }())
+        console.log(pattern);
+    </script>
+
+<!--    <script>
+        var x={
+            a:function(){
+                console.log(1);
+                return this
+            },
+            b:function(){
+                console.log(2);
+            }
+        }
+        x.a().b();
+    </script>-->
+    <!--<script type="text/javascript">-->
+        <!--var y=6-->
+        <!--var x={-->
+            <!--y:5,-->
+            <!--a:function(){-->
+                <!--console.log(this.y);    //5,指向当前的对象-->
+                <!--c();-->
+                <!--function c(){-->
+                    <!--console.log(this.y);    //6,指向window-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+        <!--x.a();-->
+    <!--</script>-->
+    <script>
+        var x={
+            a:1,
+            b:2
+        }
+        var y={
+            a:5,
+            b:9,
+            test:function(){
+                console.log(this.a+this.b);
+            }
+        };
+        y.test().apply(x);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

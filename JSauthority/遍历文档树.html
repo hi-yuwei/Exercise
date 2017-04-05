@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历文档树</title>
+    <script>
+        function getNodes(cN) {
+            //遍历去除在火狐和谷歌浏览器中识别的换行元素和注释内容
+            var arr = [];
+            for (var i = 0; i < cN.length; i++) {
+                if (cN[i].nodeType === 1) {
+                    arr.push(cN[i]);
+                }
+            }
+            return arr;
+        }
+        window.onload = function () {
+            var nodes = document.getElementById("box");
+            var cN = nodes.children;
+            alert(cN.length);
+//            console.log(getNodes(cN));
+//            console.log(getNodes(cN).length);
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <p>p元素</p>
+    <div>div元素</div>
+    <span>span元素</span>
+    <i>tips</i>
+    <h2>加粗内容</h2>
+</div>
+</body>
+</html>

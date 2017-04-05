@@ -1,0 +1,186 @@
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 去除iPhone中默认的input样式 */
+input[type="submit"], input[type="reset"], input[type="button"], input {
+    -webkit-appearance: none;
+    resize: none;
+}
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* 图片自适应 */
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body {
+    color: #555;
+    background-color: #F7F7F7;
+}
+em, i {
+    font-style: normal;
+}
+strong {
+    font-weight: normal;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+    color: #969696;
+    font-family: '宋体', Microsoft YaHei, Tahoma, Arial, sans-serif;
+}
+a:hover {
+    color: #FED503;
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-family: Microsoft YaHei;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+html{font-size:10px;
+    font-family: 'Microsoft Yahei', Tahoma, Helvetica, Arial, sans-serif;
+}
+@media only screen and (min-width: 320px){
+    html {
+        font-size: 62.5%!important;
+    }
+}
+@media only screen and (min-width: 375px){
+    html {
+        font-size: 87.5%!important;
+    }
+}
+@media only screen and (min-width: 400px){
+    html {
+        font-size: 100%!important;
+    }
+}
+/*初始化样式结束*/
+.bx-newyear-area .bx-newyear-award{
+    text-align: justify;
+    background: url("../images/h5-newyear-bj.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa{
+    overflow: hidden;
+    padding:0 1.8rem;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa h2{
+    position: relative;
+    padding-left:2.1rem;
+    margin:1.5rem 0;
+    color:#ff6694;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul{
+    position: relative;
+    padding-left:2.1rem;
+    text-align: justify;
+    color: #ffd272;
+}
+
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul li{
+    position: relative;
+    margin-bottom:1rem;
+    padding-left:1.5rem;
+    text-align: justify;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul li:before{
+    content: "1.";
+    position: absolute;
+    top:0;
+    left:0;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul li:nth-child(2):before{
+    content: "2.";
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul li:last-child:before{
+    content: "3.";
+}
+
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa span{
+    color:#ff8e8e;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa h2:before,
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa p:before,
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul:before{
+    content: "Q";
+    position: absolute;
+    top:0;
+    left:0;
+    width:1.5rem;
+    height:1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    border-radius: 0.1rem;
+    color:#fff;
+    background:#ff6694;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa p{
+    position: relative;
+    padding-left:2.05rem;
+    color:#ffd272;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa p:before{
+    content: "A";
+    background: #ff8c25;
+}
+.bx-newyear-area .bx-newyear-award .bx-newyear-qa ul:before{
+    content: "A";
+    background: #ff8c25;
+
+}
+.bx-newyear-area .bx-newyear-award .award{
+    padding:0 1.8rem;
+}
+.bx-newyear-area .bx-newyear-award .award img{
+    margin-bottom: 1rem;
+}
+.bx-newyear-area .bx-newyear-footer{
+    position: relative;
+}
+.bx-newyear-area .bx-newyear-footer a{
+    position: absolute;
+    top:2.4rem;
+    left:50%;
+    transform: translate(-50%);
+    width:13rem;
+    height:4.2rem;
+    margin:0 auto;
+}

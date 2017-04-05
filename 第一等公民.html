@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一等公民</title>
+    <!--<script>
+        function add(x, y) {
+            return x + y;
+        }
+
+        var fun = add;
+        console.log(fun);
+        /*function add(x,y){
+            return x+y;
+        }*/
+
+        function get(elm) {
+            return elm;
+        }
+
+        get(add);
+        /*function add(x,y){
+            return x+y;
+        }*/
+
+
+        get(add)(1, 3);
+        /*4*/
+    </script>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+        console.log(add(1, 2)); //3
+
+
+        function noReturn(x, y) {
+            var z = x + y;
+        }
+        console.log(noReturn(2, 5)); //undefined
+    </script>-->
+    <!--
+    <script>
+        add(1, 2);   //3
+
+        function add(x, y) {
+            console.log(x + y);
+        }
+    </script>-->
+
+    <!--<script>
+        add(2,2);   //add is not a function
+
+        var add=function(x,y){
+            console.log(x+y);
+        }
+    </script>-->
+
+    <!--<script>
+        var add = function () {
+            console.log(2);
+        }
+
+        function add() {
+            console.log(1)
+        }
+
+        add();  //2
+    </script>-->
+
+
+    <!--<script>
+        function add(){};
+        var get=function(){};
+        var fun=function myfun(){};
+        var firstFun=function(){console.log(222)}
+
+        console.log(add.name);  //火狐,谷歌都是add
+        console.log(get.name);  //火狐是"",谷歌是get
+        console.log(fun.name);  //火狐谷歌都是myfun
+        console.log(firstFun.name); //火狐是“”,谷歌是firstFun
+    </script>-->
+
+
+
+    <!--<script>
+        if(false){
+            function get(){
+                console.log(1111);
+            }
+        }
+        get();
+    </script>-->
+
+    <!--<script>
+        function add(x,y){
+
+        }
+        add.length  //2
+    </script>-->
+
+    <script>
+        function add(x, y) {
+            //打印内容
+            console.log(1111);
+        }
+        console.log(add.toString());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

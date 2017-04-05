@@ -1,0 +1,28 @@
+<script>
+    //        嵌套函数当做普通函数使用
+    function add(){
+        console.log(1);
+        function say(){
+            console.log(this);  //指向window
+        }
+        say();
+    }
+    add();
+</script>
+<script>
+    //嵌套函数在方法中
+    var person={
+        name:"beck",
+        width:"178cm",
+        height:"65kg",
+        say:function(){
+            console.log(this.name+this.width+this.height);  //指向person
+            function chi(){
+                console.log(this);  //指向window
+                console.log(this.name+"吃东西..."); //吃东西...
+            }
+            chi();
+        }
+    }
+    person.say();
+</script>

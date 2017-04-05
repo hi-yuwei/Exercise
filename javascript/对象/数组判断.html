@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组判断</title>
+    <script type="text/javascript">
+        var x=[2,5,9,10],y=[2,5,9,10];
+        if(x==y){
+            console.log("相等");
+        }else{
+            console.log("不相等"); //两个数组的指向不等，故不相等。
+        }
+
+        //不关心数组指向是否相等，就判断数组的个数和值是否相等
+        function compareArray(x,y){
+            if(x.length !== y.length){  //判断长度是否相等
+                return false;
+            }
+            else{
+                for(var i= 0,len= x.length;i<len;i++){  //判断相同索引上的值是否相等
+                    if(x[i]!==y[i]){
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        console.log(compareArray(x,y));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

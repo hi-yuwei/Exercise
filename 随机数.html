@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var obj = {}, arr = [];
+        while (true) {
+            if (arr.length === 3) {
+                break;
+            } else {
+                var val = parseInt(Math.random() * 10 + 1);
+                if (!obj[val]) {
+                    obj[val] = true;
+                    arr.push(val);
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

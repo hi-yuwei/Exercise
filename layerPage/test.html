@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css">
+        .btn{
+            width:100px;
+            height:50px;
+            border:1px solid #333;
+            background: cornflowerblue;
+            margin:400px auto;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../layer/layer.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".btn").on("click",function(){
+                layer.open({
+                    type:1,
+                    area:['500px','300px'],
+                    content:'<a href="#">123</a>'
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="btn"></div>
+</body>
+</html>

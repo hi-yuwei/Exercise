@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件注册</title>
+</head>
+<body>
+<button>点我</button>
+</body>
+<script>
+    //判断浏览器是否支持window.addEventListener注册事件
+    if (window.addEventListener) {
+        document.getElementsByTagName("button")[0].addEventListener("click", function () {
+            alert(111);
+        })
+    } else {
+        //不支持的浏览器使用attachEvent（）方法，IE9之前的都不支持addEventListener（）方法
+        document.getElementsByTagName("button")[0].attachEvent("onclick", function () {
+            alert(111);
+        })
+    }
+
+</script>
+</html>

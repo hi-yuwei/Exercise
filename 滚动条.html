@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery-1.8.2.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:visited {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        a:active {
+            color: #fff;
+        }
+
+        html, body, .box-wrap {
+            font-family: Microsoft YaHei, Tahoma, Arial, sans-serif;
+            height: 100%;
+        }
+
+        .box-wrap .page {
+            position: relative;
+            height: 100%;
+        }
+
+        .box-wrap .box1 {
+            background: dodgerblue;
+        }
+
+        .box-wrap .box2 {
+            background: goldenrod;
+        }
+
+        .box-wrap .box3 {
+            background: royalblue;
+        }
+
+        .box-wrap .box4 {
+            background: darkgrey;
+        }
+
+        .box-wrap .box5 {
+            background: mediumpurple;
+        }
+
+        .box-wrap .box6 {
+            background: darkslategray;
+        }
+
+        .box-wrap .sidebar {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            margin-top: -128px;
+            transform: scale(0);
+            transition: all 1s ease 0s;
+        }
+
+        .box-wrap .show-sidebar {
+            transform: scale(1);
+        }
+
+        .box-wrap .sidebar li {
+            width: 24px;
+            height: 24px;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 24px;
+            border: 1px solid #aaaaaa;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .5);
+            transition: all 2s ease 0s;
+            cursor: pointer;
+        }
+
+        .box-wrap .show-sidebar li {
+            transform: rotate(360deg);
+            transition: all 2s ease 0s;
+        }
+        .box-wrap .show-sidebar li.current{
+            color:#fff;
+            background: orange;
+        }
+        .box-wrap div a {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            width: 20px;
+            height: 20px;
+            margin-left: -10px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transition: all 2s ease 0s;
+        }
+
+        .box-wrap div a:hover {
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+        $(function () {
+            //点击
+            $(".page a").on("click", function (ev) {
+                //注意：$(this).index()获取的是同辈元素中的索引位置，而现在a都不是同辈元素，而他的父级是同辈元素。
+                if ($(this).parent().index() !== $("a").length - 1) {
+                    console.log($(this).offset().top);
+                    $("html,body").animate({"scrollTop": $(this).offset().top + $(this).width() + Math.abs(parseInt($(this).css("margin-left")))}, 1000);
+                    $(".sidebar ul li").eq($(this).parent().index()+1).addClass("current").siblings().removeClass("current");
+                } else {
+                    $("html,body").animate({"scrollTop": 0}, 1000);
+                }
+            });
+
+            //滚动条滚动
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 400) {
+                    $(".sidebar").addClass("show-sidebar");
+                } else {
+                    $(".sidebar").removeClass("show-sidebar");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box-wrap">
+    <div id="box1" class="page box1">
+        <a href="#box2">∨</a>
+    </div>
+    <div id="box2" class="page box2">
+        <a href="#box3">∨</a>
+    </div>
+    <div id="box3" class="page box3">
+        <a href="#box4">∨</a>
+    </div>
+    <div id="box4" class="page box4">
+        <a href="#box5">∨</a>
+    </div>
+    <div id="box5" class="page box5">
+        <a href="#box6">∨</a>
+    </div>
+    <div id="box6" class="page box6">
+        <a href="javascript:;">∧</a>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

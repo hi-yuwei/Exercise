@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阻止a标签默认事件</title>
+    <base target="_blank"/>
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <style type="text/css">
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        div a {
+            display: inline-block;
+            padding: 20px 50px;
+            border: 1px solid #666;
+        }
+
+        div a:hover {
+            background: rgba(0, 0, 0, .1);
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div a").click(function (e) {
+                e.preventDefault(); //取消默认事件，这种方法可以
+                return false;   //直接return false，这种方法也是可以的。
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <a href="//www.baidu.com">baidu</a>
+    <a href="//www.sina.com">sina</a>
+    <a href="//www.taobao.com">taobao</a>
+    <a href="//www.163.com">163</a>
+    <a href="//www.ifeng.com">ifeng</a>
+</div>
+</body>
+</html>

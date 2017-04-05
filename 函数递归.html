@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数递归</title>
+    <script type="text/javascript">
+        function factorial(n) {
+            if ((n == 0) || (n == 1))
+                return 1;
+            else
+                return (n * factorial(n - 1));
+        }
+
+        var a=factorial(1);
+        var b=factorial(2);
+        var c=factorial(3);
+        var d=factorial(4);
+        var e=factorial(5);
+        console.log("a:"+a);
+        console.log("b:"+b);
+        console.log("c:"+c);
+        console.log("d:"+d);
+        console.log("e:"+e);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

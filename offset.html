@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>offset</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        .page-next{
+            position: absolute;
+            bottom:20px;
+            left:50%;
+            margin-left:-15px;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background:rgba(255,255,255,1);
+
+        }
+        .box{
+            position: relative;
+            height:100%;
+        }
+        .red{
+            background:indianred;
+        }
+        .blue{
+            background:lightskyblue;
+        }
+        .gray{
+            background:darkgray;
+        }
+        .black{
+            background:black;
+        }
+        .green{
+            background:greenyellow;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".page-next").click(function(){
+                $("html,body").animate({
+                   scrollTop:$(this).offset().top-$(window).height()/10+100
+                },1000);
+//                console.log($(this).offset().top);
+//                console.log($(window).height()/10+100);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box red">
+        <a class="page-next" href="javascript:;"></a>
+    </div>
+    <div class="box blue">
+        <a class="page-next" href="javascript:;"></a>
+    </div>
+    <div class="box gray">
+        <a class="page-next" href="javascript:;"></a>
+    </div>
+    <div class="box black">
+        <a class="page-next" href="javascript:;"></a>
+    </div>
+    <div class="box green">
+        <a class="page-next" href="javascript:;"></a>
+    </div>
+</body>
+</html>

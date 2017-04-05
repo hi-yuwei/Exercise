@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Number('5'); //5
+        // Number('abc'); //NaN
+        // Number(null); //0
+        // Number(undefined); //NaN
+        // Number(true); //1
+        // Number(false); //0
+        // Number('1111ab'); //NaN
+        // Number('1.22'); //1.22
+        // Number('   544  '); //544
+    </script>
+
+    <script>
+        // Number({}); //NaN
+        // Number({name: 'age'});  //NaN
+    </script>
+
+    <script>
+        // Number([]); //0
+        // Number([1]);    //1
+        // Number([1,2]);  //NaN
+    </script>
+
+    <script>
+        String(1);
+        '1'
+        String('abc');
+        'abc'
+        String(true);
+        'true'
+        String(false);
+        'false'
+        String(null);
+        'null'
+        String(undefined);
+        'undefined'
+        String([]); //''
+        String([1, 2]);
+        '1,2'
+        String({}); //'[object Object]'
+        String({
+            name: 'beck'
+        }); //'[object Object]'
+    </script>
+</body>
+
+</html>

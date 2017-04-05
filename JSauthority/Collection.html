@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection</title>
+</head>
+<body>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<button>点我</button>
+</body>
+    <script>
+        var ps = document.getElementsByTagName("p");  //得到p的length保存在变量中
+        var staticNode = Array.prototype.slice.call(ps, 0);    //创建一个静态副本将没有动态操作前的NodeList保存在一个变量中
+        console.log(ps.length); //4
+        document.getElementsByTagName("button")[0].addEventListener("click", function () {
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("5");
+            newP.appendChild(txtNode);
+            document.body.appendChild(newP);
+            console.log(ps.length); //5
+            console.log(staticNode.length); //4
+        })
+    </script>
+</html>

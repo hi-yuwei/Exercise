@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>replaceChild</title>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var newElement = document.createElement('p');
+                newElement.innerHTML = 'Hello,World';
+                var childElement = document.getElementById('item-list').children[1];
+                childElement.parentNode.replaceChild(newElement, childElement);
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="item-list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<button id="btn">点击</button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式案例-对象形式</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app>
+        <p ng-init="person={name:'beck',age:28,'width':175,height:'65kg'}"></p>
+        <!--表达式方式-->
+        <span>{{'姓名:'+person.name+';年龄:'+person.age+';身高：'+person['width']+';体重:'+person.height}}</span>
+        <!--ng-bind方式实现相同效果-->
+        <p ng-bind="'姓名:'+person.name+';年龄:'+person.age+';身高：'+person['width']+';体重:'+person.height"></p>
+    </div>
+</body>
+</html>

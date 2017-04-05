@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>携程效果</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height:100%;
+        }
+        .box {
+            height: 2000px;
+        }
+
+        .bx {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            background: greenyellow;
+        }
+
+        .ad {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.2);
+            background:#000\9;
+        }
+
+        .leftad {
+            position: fixed;
+            bottom: 200px;
+            left: -100%;
+            width: 100px;
+            height: 50px;
+            background: red;
+        }
+
+        div.left0 {
+            left: 0;
+        }
+
+       div.left100 {
+            left: -100%;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var timer;
+            //定时
+            var ds = function (str) {
+                //闭包
+                return function () {
+                    $("body").append(str);
+                }
+            };
+            //核心
+            var elements = function (className, second,leftClassName, leftSecond) {
+                //通过on 绑定js添加的dom节点
+                $(document).on("click", className, function () {
+                    $(this).stop().animate({"left": "-100%"}, second, function () {
+                        $(leftClassName).stop().animate({"left": "0"}, leftSecond);
+                        localStorage.setItem("bxyear",true);
+                    });
+                });
+                $(document).on("click",leftClassName,function(){
+                    $(this).stop().animate({"left": "-100%"}, leftSecond, function () {
+                        $(className).stop().animate({"left": "0"}, 500);
+                    });
+
+                });
+        }
+
+        if (localStorage.bxyear) {
+            clearTimeout(timer);
+            timer = setTimeout(ds("<div class='leftad left0'></div>"), 1000);
+            ds("<div class='ad left100'></div>")();
+            elements(".leftad", 500,".ad", 500);
+
+        } else {
+            clearTimeout(timer);
+            timer = setTimeout(ds("<div class='ad'></div>"), 1000); //当定时器的匿名函数有参数时，他会立即执行，所以要使用闭包来解决。
+            ds("<div class='leftad'></div>")();
+            elements(".ad", 500, ".leftad", 500);
+        }
+        })
+        ;
+    </script>
+</head>
+<body>
+<section class="box">
+    <div class="bx"></div>
+</section>
+</body>
+</html>

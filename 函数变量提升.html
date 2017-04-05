@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script>
+        function add(x) {
+            if (x > 100) {
+                var temp = x - 100;
+            }
+        }
+
+        //相当于
+
+        function add(x) {
+            var temp;
+            if (x > 100) {
+                temp = x - 100;
+            }
+        }
+    </script>-->
+
+    <!--<script>
+        var a = 3;
+
+        function add() {
+            console.log(a);
+        }
+
+        function say(fun) {
+            var a = 5;
+            fun();
+        }
+
+        say(add);
+    </script>-->
+
+    <!--<script>
+        var A = function () {
+            console.log(a);
+        }
+
+        function B(fun) {
+            var a = 5;
+            fun();
+        }
+
+        B(A);   //Uncaught ReferenceError: a is not defined
+    </script>-->
+
+    <!--<script>
+        function f(a, b) {
+            return a;
+        }
+
+        f(1, 2, 3) // 1
+        f(1) // 1
+        f() // undefined
+
+        f.length // 2
+    </script>-->
+
+    <!--<script>
+        var parameter = 5;
+        function add(parameter) {
+            parameter = 10;
+        }
+        add(parameter);
+        console.log(parameter); //5
+    </script>-->
+
+    <!--<script>
+        var obj = { name: 'yuwei', age: 29 };
+
+        function updateObj(el) {
+            el.name = 'beck';
+            console.log(el);    //{ name: 'beck', age: 29 }
+
+        }
+
+        updateObj(obj);
+        console.log(obj);   //{ name: 'beck', age: 29 }
+    </script>-->
+
+    <script>
+        var a=10,b = 10;
+        (function () {
+            var a=b=20;
+        })();
+        console.log(a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

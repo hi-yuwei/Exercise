@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过ID查找多个元素</title>
+</head>
+<body>
+    <p id="name"></p>
+    <input id="age"/>
+    <a id="school"></a>
+    <div id="width"></div>
+<script>
+    function getElement() {
+        var elm = {};
+        //这里为什么用arguments[0].length来获取实参的个数？
+        //因为arguments是一个对象，其length属性获取实参的个数，而目前实参只有一个。
+        //我们可以通过arguments[0]获得第一个参数（数组），在通过.length来取的数组参数的个数。
+        for (var i = 0, len = arguments[0].length; i < len; i++) {
+            var elements = document.getElementById(arguments[0][i]);
+            if (!!elements) {
+                elm[i] = elements;
+            }
+        }
+        console.log(elm);
+    }
+    getElement(['name', 'age', 'school', 'width']);
+</script>
+</body>
+</html>

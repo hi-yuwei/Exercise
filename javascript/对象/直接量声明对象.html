@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直接量声明对象</title>
+    <script type="text/javascript">
+        var empty={};   //没有任何属性的对象
+        var point={x:0,y:1};    //两个属性的对象
+        var point2={x:point.x,y:point.y+1};   //更复杂的值
+        var book={
+            "main title":"javascript",  //属性名中有空格，必须用字符串表示
+            "sub-title":"The HELLO,WORD",   //属性名中有连字符，必须用字符串表示
+            "for":23,   //for为保留字，必须用字符串表示
+            width:178,
+            author:{    //这个属性的值是一个对象
+                firstname:"beck",   //建议：这里的属性名都没有引号
+                lastname:"yu",
+                "width":123
+            }
+        }
+        console.log(book.author.firstname); //beck
+        console.log(book.author.width); //123
+        console.log(book.author["width"]);  //123
+    </script>
+</head>
+<body>
+
+</body>
+</html>

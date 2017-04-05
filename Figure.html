@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery-1.8.2.min.js"></script>
+    <script src="./myjs.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .clearfix::before {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wrap .person, .wrap .Works {
+            width: 600px;
+            height: 600px;
+        }
+
+        .wrap .person {
+            position: relative;
+            background: #A78F85;
+        }
+
+        .wrap .person .person-list {
+            position: relative;
+            width: 300px;
+            height:600px;
+            overflow: hidden;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .wrap .person .person-list .list-box {
+            position: absolute;
+            top:0;
+            width: 5000px;
+        }
+
+        .wrap .person .person-list .list-box div {
+            float: left;
+            width: 300px;
+        }
+
+        .wrap .person .person-list img {
+            border-radius: 50%;
+        }
+
+        .wrap .Works {
+            position: relative;
+            overflow: hidden;
+            background: #999;
+        }
+
+        .wrap .Works .Works-list{
+            position: absolute;
+            top:0;
+            left:0;
+            width:10000px;
+
+        }
+        .wrap .Works .Works-list div {
+            width:600px;
+            float: left;
+            text-align: center;
+        }
+        .wrap .Works .Works-list div p{
+            line-height: 600px;
+        }
+
+        .btn a {
+            position: absolute;
+            bottom: 100px;
+            width: 20px;
+            height: 20px;
+            background: #000;
+        }
+
+        .btn .prev {
+            left: 100px;
+        }
+
+        .btn .next {
+            right: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap clearfix">
+    <div class="person fl">
+        <div class="person-list ">
+            <div class="list-box clearfix">
+                <div>
+                    <img src="./images/img1.jpg"/>
+                    <h3>马云1</h3>
+                    <span>阿里巴巴</span>
+                    <p>1964年9月10日出生于浙江省杭州市，祖籍浙江绍兴嵊州（原嵊县）谷来镇，中国着名企业家，阿里巴巴集团、淘宝网、支付宝创始人。</p>
+                </div>
+                <div>
+                    <img src="./images/img1.jpg"/>
+                    <h3>马云2</h3>
+                    <span>阿里巴巴</span>
+                    <p>1964年9月10日出生于浙江省杭州市，祖籍浙江绍兴嵊州（原嵊县）谷来镇，中国着名企业家，阿里巴巴集团、淘宝网、支付宝创始人。</p>
+                </div>
+                <div>
+                    <img src="./images/img1.jpg"/>
+                    <h3>马云3</h3>
+                    <span>阿里巴巴</span>
+                    <p>1964年9月10日出生于浙江省杭州市，祖籍浙江绍兴嵊州（原嵊县）谷来镇，中国着名企业家，阿里巴巴集团、淘宝网、支付宝创始人。</p>
+                </div>
+                <div>
+                    <img src="./images/img1.jpg"/>
+                    <h3>马云4</h3>
+                    <span>阿里巴巴</span>
+                    <p>1964年9月10日出生于浙江省杭州市，祖籍浙江绍兴嵊州（原嵊县）谷来镇，中国着名企业家，阿里巴巴集团、淘宝网、支付宝创始人。</p>
+                </div>
+                <div>
+                    <img src="./images/img1.jpg"/>
+                    <h3>马云5</h3>
+                    <span>阿里巴巴</span>
+                    <p>1964年9月10日出生于浙江省杭州市，祖籍浙江绍兴嵊州（原嵊县）谷来镇，中国着名企业家，阿里巴巴集团、淘宝网、支付宝创始人。</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="javascript:;" class="prev"></a>
+            <a href="javascript:;" class="next"></a>
+        </div>
+        <p class="num"><span class="current">1</span>/<span class="cunt">1</span></p>
+    </div>
+    <div class="Works fl">
+        <div class="Works-list clearfix">
+            <div>
+                <P>马云1</P>
+            </div>
+            <div>
+                <P>马云2</P>
+            </div>
+            <div>
+                <P>马云2</P>
+            </div>
+            <div>
+                <P>马云3</P>
+            </div>
+            <div>
+                <P>马云4</P>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        run.donfun();
+    })
+</script>
+</body>
+</html>

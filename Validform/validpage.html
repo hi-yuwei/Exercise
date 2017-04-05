@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validpage</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/Validform_v5.3.2.js"></script>
+</head>
+<body>
+    <form id="registerform" class="register-wrap">
+        <input type="text" value="请输入3-6个字母" datatype="/\w{3,6}/i" errormsg="昵称至少3个字符，最多6个字符" tip="请输入3-6个字母" altercss="gray"/>
+    </form>
+    <script type="text/javascript">
+        $(function(){
+            $(".register-wrap").Validform();
+        })
+
+    </script>
+</body>
+</html>

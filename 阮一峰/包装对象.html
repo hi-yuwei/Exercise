@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var v1 = new Number(123);
+        // var v2 = new String('abc');
+        // var v3 = new Boolean(true);
+
+        // typeof v1; //'object'
+        // typeof v2; //'object'
+        // typeof v3; //'object'
+
+        // v1 === 123; //false
+        // v2 === 'abc'; //false
+        // v3 === true; //fasle
+    </script>
+
+    <script>
+        // Number('123'); //123
+        // String(456); //'456'
+        // Boolean(0); //false
+
+        // var x = new Boolean(111);
+        // console.log(x);
+
+        // new Number(123).valueOf() // 123
+        // new String("abc").valueOf() // "abc"
+        // new Boolean("true").valueOf() // true
+
+        // new Number(123).toString() // "123"
+        // new String("abc").toString() // "abc"
+        // new Boolean("true").toString() // "true"
+    </script>
+
+
+    <!--<script>
+        var str = 'abc';
+        str.length;
+
+        new String(str).length;
+    </script>-->
+
+    <!--<script>
+        String.prototype.double = function() {
+            return this.valueOf() + this.valueOf();
+        }
+
+        var str = 'abc';
+        console.log(str.double()); //'abcabc'
+
+        Number.prototype.setDouble = function() {
+            return this.valueOf() * 2;
+        }
+        var num = 5;
+        console.log(num.setDouble()); //10;
+           </script>-->
+
+    <!--<script>
+        var bol = new Boolean(true);
+        console.log(typeof bol); //object
+        console.log(bol); // {[[PrimitiveValue]]: true}
+        console.log(bol.valueOf()); //true
+
+        var bol=true;
+    </script>-->
+    <script>
+        // if (new Boolean(false)) {
+        //     console.log(true); //true
+        // }
+
+        // if (new Boolean(false).valueOf()) {
+        //     console.log(true); //没有输出
+        // }
+        // Object.prototype.double = function() {
+        //     return this.valueOf() * 2;
+        // }
+        // var x = 'abc';
+        // console.log(x.double());
+    </script>
+
+
+    <script>
+        Number.prototype.add = function(x) {
+            return this + x;
+        }
+        var num = 10;
+        num.add(5);
+    </script>
+</body>
+
+</html>

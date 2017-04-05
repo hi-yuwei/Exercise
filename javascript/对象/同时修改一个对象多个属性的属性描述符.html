@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同时修改一个对象多个属性的属性描述符</title>
+    <script type="text/javascript">
+        //创建一个空的对象，并设置其属性和属性描述符
+        var p = Object.defineProperties({}, {
+            name: {value: "Beck", writable: false, enumerable: true, configurable: true},
+            age: {value: "28", writable: true, enumerable: true, configurable: true},
+            width: {value: "178", writable: true, enumerable: true, configurable: true},
+            height: {value: "65kg", writable: true, enumerable: true, configurable: true}
+        });
+        //遍历
+        for (var i in p) {
+            console.log(i in p);    //判断是否是自有属性
+            console.log(Object.getOwnPropertyDescriptor(p, i));  //打印每个属性的属性描述符
+        }
+
+
+        var x = {
+            name: "xiaowang",   //普通属性
+            age: 28,
+            //存取器属性
+            get r() {
+//get,set当做对象的方法，故this指向当前对象
+                return this.name + this.age;
+            },
+            set r(value) {
+                if (value) {
+                    this.name = value;
+                }
+            }
+        };
+        x.r = "小明";   //设置
+        console.log(x.r);   //读取
+
+        //y继承x对象
+        var y = Object.create(x);
+        y.r = "小红";   //修改存取器属性
+        console.log(y.r);   //小红28
+        console.log(x.r)    //小明28，继承对象对属性的修改，对原型对象没有影响
+    </script>
+</head>
+<body>
+
+</body>
+</html>

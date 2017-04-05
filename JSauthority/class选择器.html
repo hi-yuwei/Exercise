@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class选择器</title>
+
+</head>
+<body>
+<div id="bx">
+    <p>1</p>
+    <p>2</p>
+</div>
+<script>
+    var divNode=document.getElementById("bx");
+    var pnode=document.createElement("p");
+    var ptext=document.createTextNode("hello,123");
+    pnode.innerText=ptext;
+    divNode.appendChild(pnode);
+
+</script>
+</body>
+
+</html>

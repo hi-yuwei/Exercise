@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1 + 1;    //2
+        // true + true;  //2
+        // true + 1; //2
+
+        // '1' + 1;  //'11'
+        // '1.1' + '1.1';    //'1.11.1'
+    </script>
+
+    <script>
+        // '1' + { foo: bar };  //'1[object Object]'
+        // 1 + '1';    //'11'
+        // false + '1';     //'false1'
+        // '1' + [1];  //'11'
+    </script>
+
+    <script>
+        // console.log('3' + 3 + 5);   //'335'
+        // console.log(5 + 4 + '1');   //'91'
+    </script>
+
+    <script>
+        // var x = 5;
+        // x + '';   //'5'
+        // x - 2 + ''; //'3'
+    </script>
+
+    <script>
+        var x='5',
+            y='8';
+
+        console.log(typeof (+'2'));
+        console.log(typeof (+x+y));
+        console.log(+(x+y));
+
+    </script>
+</body>
+
+</html>

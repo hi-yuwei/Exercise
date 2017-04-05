@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appendChild</title>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var pElement = document.getElementById('txt');
+                document.getElementById('box').appendChild(pElement);   //标签中原有位置上被删除，插入到新的位置上
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <p id="txt">hello,world!</p>
+    <input type="button" value="onClick" id="btn"/>
+    <div id="box">
+        <p>沙发</p>
+    </div>
+</div>
+</body>
+</html>

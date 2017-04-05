@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高阶函数求平均数</title>
+    <script>
+
+        var updateOneself=function(x){
+            return x*2;
+        }
+        var arr=[1,2,3,4,5];
+        console.log(arr.map(function(x){
+            return x+2;
+        }));
+        console.log(arr.map(updateOneself));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

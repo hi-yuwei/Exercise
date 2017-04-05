@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>inline-block</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body,html{
+            line-height: 1.5;
+            font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+        }
+        .column{
+            width:100%;
+            border:1px solid #999;
+        }
+        .column .column-item{
+            font-size:16px;
+            display: inline-block;
+            width:50%;
+            text-align: center;
+            color:#fff;
+        }
+        .column .column-item:first-child{
+            background: #00a2ec;
+        }
+        .column .column-item:last-child{
+            background: #00aa78;
+        }
+        .abc{
+            height: 50px;
+            border:1px solid #000;
+            display: inline-block;
+
+        }
+        .abc p{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="column">
+        <div class="column-item">抵押标回款日</div>
+        <div class="column-item">自定义</div>
+    </div>
+
+
+</body>
+</html>

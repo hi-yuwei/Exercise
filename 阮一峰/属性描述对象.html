@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var obj = {
+        //     name: 'beck',
+        //     age: 29,
+        //     sex: '男'
+        // }
+        // Object.getOwnPropertyDescriptor(obj, 'name'); //{value: "beck", writable: true, enumerable: true, configurable: true}
+
+        // Object.defineProperty('属性所在的对象','属性名','属性的描述对象');
+    </script>
+
+
+    <script>
+        // var obj = {
+        //     name: 'yuwei',
+        //     sex: '男',
+        //     age: 29
+        // };
+        // obj.name; //'yuwei'
+        // obj.sex; //'男'
+        // obj.age; //29
+
+        // Object.defineProperties(obj, {
+        //     name: {
+        //         value: 'beck',
+        //         writable: true,
+        //         enumerable: true,
+        //         configurable: false
+        //     },
+        //     sex: {
+        //         value: '女',
+        //         writable: true,
+        //         enumerable: true,
+        //         configurable: false
+        //     },
+        //     age: {
+        //         get: function() {
+        //             return 80;
+        //         },
+        //         enumerable: true,
+        //         configurable: false
+        //     },
+        // });
+        // obj.name; //'beck'
+        // obj.sex; //'女'
+        // obj.age; //80
+    </script>
+
+    <script>
+        // var obj = Object.defineProperty({}, 'name', {
+        //     value: 'beck',
+        // });
+        // delete obj.name;
+        // obj.name; //'beck'
+
+        // //对象该属性的属性描述对象无法修改
+        // Object.defineProperty(obj, 'name', {
+        //     value: 'yw',
+        //     writable: true,
+        //     configurable: true,
+        //     enumerable: true
+        // });
+        // obj.name;   //Uncaught TypeError: Cannot redefine property: name
+    </script>
+
+    <script>
+        var obj = {
+            name: 'beck',
+            age: 29,
+            sex: '男'
+        }
+        for (var key in obj) {
+            console.log(key); //name , age , sex
+        }
+        Object.defineProperty(obj, 'name', {
+            enumerable: false
+        });
+
+        for (var key in obj) {
+            console.log(key);
+        }
+    </script>
+</body>
+
+</html>

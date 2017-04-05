@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量提升</title>
+    <script type="text/javascript">
+        var name = "Jog"; //全局变量
+        function prison() {
+            console.log(a); //输出undefined;
+            var a = 1;  //局部变量
+            console.log(a); //输出1；
+            console.log(name);  //输出Jog;
+        };
+        prison();
+    </script>
+    <script type="text/javascript">
+        var name = "Jog";
+        function prison() {
+            console.log(name);  //输出undefined;
+            var name = "Hans";
+        };
+        prison();
+    </script>
+</head>
+<body>
+
+
+var str='';
+for(var i=0;i<100;i++){
+    str+='<li>'+内容+'</li>'
+}
+append(str)
+
+</body>
+</html>

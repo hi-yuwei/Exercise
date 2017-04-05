@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var a={};
+        var b={key:'b'};
+        var c={key:'c'};
+        a[b]=123;   //相当于a['[object object]']=123;
+        a[c]=456;   //相当于a['[object object]']=456;
+        //当前对象:a['[object object]']=456;
+        console.log(a[b]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

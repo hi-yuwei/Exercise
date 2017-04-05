@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hasAttribute</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById('btn');
+            console.log(btn.hasAttribute('disabled'));  //true
+
+            var aElement = document.links;
+            aElement[0].onclick = function () {
+                btn.removeAttribute('disabled');    //删除按钮的disabled属性
+            }
+
+        };
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="onClick" disabled/>
+<a href="javascript:;">删除属性</a>
+</body>
+</html>

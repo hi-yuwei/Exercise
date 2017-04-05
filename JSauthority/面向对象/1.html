@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <script>
+        var robot={
+            name:"Robot",
+            height:"175cm",
+            run:function(){
+                console.log(this.name+"is running...");
+            }
+        };
+        var brid={
+            fly:function(){
+                console.log(this.name+'is fly...');
+            }
+        }
+        var xiaoming=Object.create(robot);
+        xiaoming.name='小明';
+        console.log(xiaoming.name);
+        xiaoming.run();
+
+        xiaoming=Object.create(brid);
+        xiaoming.name="小鸟";
+        xiaoming.fly();
+    </script>
+    <script>
+        function person(name){
+            this.name=name; //this指向实例化这个构造函数的对象
+            this.say=function(){
+                console.log(this.name+'hi...');
+            }
+        }
+        //构造函数中的this指向这个xiaohong
+        var xiaohong=new person('小红');
+        console.log(xiaohong.name); //小红
+        xiaohong.say(); //小红hi...
+    </script>
+</head>
+<body>
+
+</body>
+</html>

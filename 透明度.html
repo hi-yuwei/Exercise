@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>透明度</title>
+    <style type="text/css">
+        .box1 {
+            height: 40px;
+            background: rgb(236, 23, 25);
+            color: #000;
+            /*影响子元素的透明度*/
+            opacity: .5;
+        }
+        
+        .box2 {
+            margin-top: 20px;
+            height: 40px;
+            /*不影响子元素的透明度*/
+            background: rgba(236, 23, 25, .5);
+            color: #000;
+        }
+
+        /*影响子元素的透明度*/
+        .box3 {
+            margin-top: 20px;
+            height: 40px;
+            color: #000;
+            background: red;
+            filter:Alpha(opacity=50);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"><span>opacity</span></div>
+
+    <div class="box2"><span>rgba</span></div>
+
+    <div class="box3"><span>IE6-8透明度</span></div>
+</body>
+
+</html>

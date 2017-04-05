@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+          id="viewport">
+    <title>uploadImage</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .clearfix:after, .clearfix:before {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .uploadWrap {
+            width: 94%;
+            margin: 10% auto;
+            color: #adadad;
+        }
+
+        .uploadWrap .uploadBox {
+            width: 40%;
+            overflow: hidden;
+            border: 1px dashed #adadad;
+            background: url("./images/add.png") no-repeat center;
+        }
+
+        .uploadWrap .uploadBox input[type='file'] {
+            height: 0;
+            width: 100%;
+            padding-bottom: 100%;
+            opacity: 0;
+        }
+
+        .uploadWrap .hint {
+            width: 60%;
+            padding: 5%;
+        }
+
+        .imgList {
+            margin-top: 10px;
+        }
+
+        .imgList > img {
+            width: 46%;
+            padding: 0 2%;
+        }
+    </style>
+    <script type="text/javascript" src="../../jquery-1.8.2.min.js"></script>
+</head>
+<body>
+<div class="uploadWrap">
+    <div class="clearfix">
+        <div class="uploadBox fl">
+            <!--multiple属性设置可以选中多张-->
+            <input type="file" accept="image/*" id="uploadBtn" multiple/>
+        </div>
+        <p class="hint fr">请上传发货单、发票或货物验收单照片。</p>
+    </div>
+    <div class="imgList">
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var btn = $("#uploadBtn");
+        var reg = /.jpg|.png|.jpeg|.gif/;
+
+        //当控件修改时触发函数
+        var change = function (e) {
+            //获得事件源的对象
+            var files = e.target.files;
+            if (files.length > 6) {
+                //个数大于6
+                alert("单次最多只能选择6张")
+                return false;
+            } else {
+                for (var i = 0, len = files.length; i < len; i++) {
+                    var ofile = new FileReader();
+                    //对象为Null不操作
+                    if (files[i] && reg.test(files[i].type)) {
+                        ofile.readAsDataURL(files[i]);
+
+                        //图片加载完成
+                        ofile.onload = function (e) {
+                            //图片预览
+                            var imgStr = document.createElement("img");
+                            imgStr.src = e.target.result;
+                            imgStr.alt = "";
+                            document.getElementsByClassName("imgList")[0].appendChild(imgStr);
+
+                            //图片上传
+                        }
+                    } else {
+                        alert("请上传正确的图片！");
+                        return false;
+                    }
+                }
+                //解决选中同一张图片的BUG
+                $(".uploadBox").append($(this).clone(true));    //赋值节点追加
+                $(".uploadBox input:first").remove();   //删除原有
+            }
+        }
+
+        //控件发生改变时
+        $("#uploadBtn").on("change", change);
+
+    })
+</script>
+</body>
+</html>

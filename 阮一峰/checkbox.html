@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="http://cdn.bootcss.com/jquery/1.10.1/jquery.js"></script>-->
+    <script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.js"></script>
+</head>
+
+<body>
+    <label>新手<input type="checkbox" class="a"  /></label>
+    <label>老手<input type="checkbox" class="b" /></label>
+
+    <script>
+        function setRookie() {
+            $('.a').removeAttr('checked');
+            $('.b').attr('checked', true);
+        }
+
+        function setVeteran() {
+            $(".b").removeAttr('checked');
+            $('.a').attr('checked', true);
+        }
+
+        $('.a,.b').click(function() {
+            if ($(this).is(':checked')) {
+                if ($(this).hasClass('a')) {
+                    setVeteran();
+
+                } else {
+                    setRookie();
+                }
+
+            } else {
+                if ($(this).hasClass('a')) {
+                    setRookie();
+
+                } else {
+                    setVeteran();
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        var name=location.search.substr(1)||"";
+       var name=decodeURIComponent(location.search.substr(1)||"");
+        document.write("hi:"+name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

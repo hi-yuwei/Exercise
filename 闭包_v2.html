@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+    <script type="text/javascript">
+        function sum(arr){
+            var he=function(){
+                var sum=null;
+                for(var i= 0,len=arr.length;i<len;i++){
+                    sum+=arr[i];
+                }
+                return sum;
+            }
+            return he;
+        }
+        var f=sum(1,2,3,4,5);
+        console.log(f);
+        console.log(f());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

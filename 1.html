@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function railwayCountDown(url, second, doms) {
+            var timer, countDown;
+            countDown = function () {
+                if (--second < 1) {
+                    clearInterval(timer);
+                    location.href = url;
+                } else {
+                    doms.html(second)
+                }
+            }
+            clearInterval(timer);
+            timer = setInterval(countDown, 1000);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

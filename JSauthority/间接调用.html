@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>间接调用</title>
+    <script>
+        function  fun(x,y){
+            console.log(x+y+this.z);
+        }
+
+        var person={
+            z:4,
+            name:'beck'
+        }
+        fun.call(person,5,4);   //12
+        fun.apply(person,[1,1]);    //6
+    </script>
+</head>
+<body>
+
+</body>
+</html>

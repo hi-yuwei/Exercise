@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>video</title>
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
+	<!--<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_mobile.js"></script>-->
+	<script src="https://vm.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js"></script>
+</head>
+<body>
+	<div id="mod_player"></div>
+
+
+	<div id="movideo" class="mob-video"></div>
+	<script>
+		var video = new tvp.VideoInfo();
+		video.setVid("h0346ijl2q6");
+		var player = new tvp.Player();
+		player.create({
+			video: video,
+			modId: "mod_player",
+			autoplay: false
+
+		})
+	</script>
+</body>
+</html>

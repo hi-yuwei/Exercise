@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>match()</title>
+    <script>
+        var reg=/(\w+):\/\/([\w.]+)/;
+        var url="https://www.bxjr.com";
+        var result=url.match(reg);
+        if(result){
+            console.log(result[0]); //https://www.bxjr.com
+            console.log(result[1]); //https
+            console.log(result[2]); //www.bxjr.com
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取或设置属性值</title>
+    <script>
+        window.onload=function(){
+            var className=document.getElementById("line").getAttribute("class");
+            console.log(className); //box
+            document.getElementById("line").setAttribute("class","box yy");
+        }
+    </script>
+</head>
+<body>
+    <p class="box" id="line"></p>
+</body>
+</html>

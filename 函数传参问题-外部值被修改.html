@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参问题-外部值被修改</title>
+    <script type="text/javascript">
+        function add(ob){
+            ob.name="robot";
+        }
+        var objets={
+            name:"beck",
+            age:18,
+            height:136
+        }
+
+        var x=objets.name;
+        console.log(x); //"beck"
+
+        add(objets);
+        var y=objets.name;
+        console.log(y); //"robot"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

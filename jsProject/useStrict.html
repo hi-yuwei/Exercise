@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>noscript</title>
+</head>
+<body>
+
+    <script>
+        "use strict"    //整个script标签中的代码就按照严格模式执行
+    </script>
+
+    <script>
+        //仅限这个函数中的代码按照严格模式执行
+        var add = function () {
+            "use strict"
+        }
+    </script>
+</body>
+</html>

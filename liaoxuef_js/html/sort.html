@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sort</title>
+    <script>
+        var arr=[5,1,9,3,2],strArr=["yuwei","apply","xiaoming","anngle"];
+        var r=arr.sort(function(x,y){
+            //倒序
+            // return x<y;
+            //正序
+            return x>y;
+        });
+        console.log(r);
+
+        var str=strArr.sort(function(x,y){
+            var s1=x.toUpperCase();
+            var s2=y.toUpperCase();
+            return s1>s2;
+            //字符串排序
+        });
+        console.log(str)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

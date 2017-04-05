@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object.prototype.getName = function() {
+        //     return this.name;
+        // }
+
+        // var obj = {
+        //     name: 'yuwei',
+        //     age: 29
+        // };
+        // console.log(obj.getName());
+    </script>
+
+    <script>
+        Date.parse('2017-03-23 00:00:00'); //1490198400000
+    </script>
+
+
+    <!--<script>
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function randSort1(arr) {
+            for (var i = 0, len = arr.length; i < len; i++) {
+                var rand = parseInt(Math.random() * len); //通过Math.random生成一个随机数(比如是：0.32222)，然后乘以数组的长度10,再获取他的整数，相当于：parseInt(0.32222*10),结果为3
+                //以下涉及到两个变量值交换的原理
+                //1、先声明一个变量，存储通过随机数获取的数组的值：var temp=arr[3],相当于var temp=4;
+                //2、通过当前循环的i值，获取数组中的元素。假设当前i=0，arr[3]=arr[0],此时数组变成了[1,2,3,1,5,6,7,8,9,10]
+                //3、最后将之前存储在temp中的变量值再赋值给i=0的数组元素，此时数组变成[4,2,3,1,5,6,7,8,9,10]
+                //以此类推，达到随机改变数组元素位置
+                var temp = arr[rand];
+                arr[rand] = arr[i];
+                arr[i] = temp;
+            }
+            return arr;
+        }
+        console.log(randSort1(arr));
+    </script>-->
+
+    <script>
+        // var regex = new RegExp('xyz');
+        // regex.test('xyz');
+
+        // var reg=/abc/;
+        // reg.test('abc');
+    </script>
+
+    <script>
+        var reg = /abc/ig;
+        reg.lastIndex; //0
+        reg.source; //'abc'
+    </script>
+
+
+
+    <script>
+        var i = 10;
+        for (; i <= 15; i++) {
+            console.log("i=" + i);
+        };
+    </script>
+</body>
+
+</html>

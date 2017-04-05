@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object.create创建对象</title>
+    <script type="text/javascript">
+        /*        var x=Object.create({x:1,y:2}); //继承了x，y属性
+         console.log(x.x);   //1
+         console.log(x.y);   //2
+         console.log(x.toString())*/
+
+        /*        var z=Object.create(null);  //创建一个空对象，不继承任何属性和方法
+         z.x=5;
+         z.y=10;
+         console.log(z.toString());  //报错，因为对象没有继承然后内容，连基础方法也没有
+         console.log(z.y.toString());    //“10”，对象属性没有影响*/
+
+        /*        var y=Object.create(Object.prototype);  //创建一个拥有基础方法的空对象
+         y.x=2;
+         y.b=3;
+         console.log("y"+y.toString());  //[object Object],拥有基础方法
+
+
+         var x={name:"xiaoming"} //直接量声明一个对象，继承自Object.prototype，拥有基础方法和属性
+         var y=Object.create(x); //y继承自x
+         y.age=25;
+         var z=Object.create(y); //z继承自y
+         z.school="完小";
+         console.log(z.name);    //xiaoming,z对象先在自身上找name属性未找到的话，向它的原型对象y身上找name属性，y身上也没有找到在向y的原型对象x身上找，并找到了这个属性
+         console.log(z.width);   //undefined，跟以上同理，但未找到width这个属性
+
+
+         var x={name:"xiaoming"}
+         var y=Object.create(x);
+         y.name="xiaohong";  //y的name属性覆盖x的name属性，y拥有自身name属性，x的name属性不会被修改
+         console.log(y.name);    //xiaohong
+         console.log(x.name);    //xiaoming
+
+
+         var o={r:1};    //一个用来继承的对象
+         var c=Object.create(o); //c继承属性r
+         c.x=5;  //c定义一个属性x
+         c.y=10; //c定义一个属性y
+         c.r=4;  //c覆盖继承来的属性
+         console.log(c.r);   //4
+         console.log(o.r);   //1,原型对象没有被修改*/
+
+
+        /*        var x={y:1,z:{a:5}};
+         console.log(x.p);   //undefined
+         console.log(x.z.a); //5
+         console.log(b.x);   //报错，原始对象不存在
+         console.log(x.c.length); //报错，对象的c属性不存在是undefined，undefined没有属性，所以报错*/
+
+        /*        var x={
+         name:"xiaoming",
+         age:27,
+         height:"65kg"
+         };
+         var y=Object.create(x);
+         y.width=178;
+         console.log(y.width);   //178
+         delete  y.width;
+         console.log(y.width);   //undefined
+
+         console.log(y.name);    //继承的属性,xiaoming
+         delete  y.name; //无法删除继承的属性
+         console.log(y.name);    //没有被删除，还是xiaoming
+
+         delete  x.name; //只能通过它的原始对象进行删除
+         console.log(y.name);    //undefined*/
+
+
+        /*        var x={name:"xiaoxiao",age:27};
+         var y=Object.create(x);
+         y.width=178;
+         y.height="65kg";
+         for(var i in y){
+         //判断是否是自有属性
+         if(y.hasOwnProperty(i)){
+         console.log(i); //属性名：width,height
+         //                //注：这里不能使用x.i的方式，以为此时的i是字符串必须放在[]中
+         console.log(y[i]); //属性值：178,65kg
+         }
+         }*/
+
+        var x = {y: 1, z: {a: 5}, r: "hello,word"};
+        console.log(x.p);   //undefined
+        console.log(x.z.a); //5
+        console.log(b.x);   //报错，原始对象不存在
+        console.log(x.c.length); //报错，对象的c属性不存在是undefined，undefined没有属性，所以报错
+        console.log(x.y.length);    //undefined，对象存在y属性，但属性y的值是数字，数字没有length属性
+        console.log(x.r.length);    //10,对象存在r属性，r属性的值是字符串，字符串拥有length属性
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

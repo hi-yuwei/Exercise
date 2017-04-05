@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>
+        if(!Array.prototype.clearRepeat){
+            Array.prototype.clearRepeat=function(obejct,arr){
+                var self=this,args=arguments;
+                return function(){
+                    var arr=[];
+                    for(var i=0;i<arguments.length;i++){
+                        if(!arr[arguments[i]]){
+                            arr[i]=arr[arguments[i]];
+                        }
+                    }
+                    return self.apply(obejct,arr);
+                }
+            }
+        }
+
+        var arrs=[2,3,4,5,3,2];
+        console.log(arrs.clearRepeat()());
+    </script>-->
+    <script>
+        var person=function(){
+            var sum=0;
+            return function(){
+                return ++sum;
+            }
+        }
+        var b=person();
+        console.log(b());
+        console.log(person());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

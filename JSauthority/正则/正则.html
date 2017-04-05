@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var reg=/^\d{17}[\dxX]{1}$/;
+        console.log(reg.test("330523199001036419"));
+        console.log(reg.test("33052319900103641"));
+        console.log(reg.test("33052319900103641111"));
+        console.log(reg.test("33052319900103641X"));
+        console.log(reg.test("33052319900103641x"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

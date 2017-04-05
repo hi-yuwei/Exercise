@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            overflow: hidden;
+        }
+        .phone {
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 400px;
+
+        }
+        .phone input{
+            width:290px;
+            height:20px;
+            padding:5px;
+            letter-spacing: 20px;
+        }
+        .phone button {
+            width: 100px;
+            height: 30px;
+        }
+        .shade{
+            display: none;
+            position: fixed;
+            position: absolute\9;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            background:#000\9;
+            filter:alpha(opacity=50);
+        }
+        .surprised{
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display: none;
+            width:200px;
+            height:200px;
+            line-height: 200px;
+            background: #fff;
+            text-align: center;
+        }
+        .surprised div{
+            position: absolute;
+            top:0;
+            right:0;
+            width:20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border:1px solid #000;
+            border-radius: 50%;
+            cursor:pointer;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var time;
+            function countDown(){
+                clearTimeout(time);
+                time=setTimeout(function(){
+                    $(".surprised").show();
+                },10)
+            }
+            $("button").on("click",function(){
+                $(".shade").css("display","block");
+                countDown();
+            });
+            $(".surprised div").on("click",function(){
+                $(this).parents("div").css("display","none");
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="phone">
+    <input type="number" placeholder="15126550191"/><br/>
+    <button>确定</button>
+</div>
+<div class="shade">
+    <div class="surprised">
+        恭喜你中奖了
+        <div>X</div>
+    </div>
+</div>
+</body>
+</html>

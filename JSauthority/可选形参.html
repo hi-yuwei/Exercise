@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可选形参</title>
+    <script>
+        var add=function(x,y){
+            return x+y;
+        }
+        var xj=function(x,y){
+            return x-y;
+        }
+        function fun(a,b,c){
+            return a(b,c);
+        }
+
+        console.log(fun(add,1,2));  //3
+        console.log(fun(xj,8,2));   //6
+    </script>
+</head>
+<body>
+
+</body>
+</html>

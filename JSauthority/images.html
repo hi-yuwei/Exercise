@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images</title>
+</head>
+<body>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <form>
+        1
+    </form>
+    <form>
+        2
+    </form>
+    <form id="login">3</form>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+</body>
+<script>
+    console.log(document.images.length);    //16
+    console.log(document.forms[1].innerText);    //2
+    console.log(document.forms.login.innerText);    //3
+    var content=Array.prototype.map.call(document.getElementsByTagName("p"),function(e){return e.innerText});
+    console.log(content);
+</script>
+</html>

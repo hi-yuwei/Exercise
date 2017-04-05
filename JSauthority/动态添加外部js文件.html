@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加外部js文件</title>
+</head>
+<body>
+
+</body>
+<script>
+    function loadasync(url) {
+        var head = document.getElementsByTagName("head")[0];
+        var s = document.createElement("script");
+        s.src = url;
+        head.appendChild(s);
+    }
+    loadasync("https://www.bxjr.com/js/jquery-1.11.1.min.js");
+</script>
+</html>

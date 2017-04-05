@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式案例-数组形式</title>
+    <script src="./angular.min.js"></script>
+</head>
+<body>
+    <div ng-app>
+        <p ng-init="person=['beck',28,176,'65kg']"></p>
+        <!--表达式方式-->
+        <span>{{'姓名:'+person[0]+';年龄:'+person[1]+';身高：'+person[2]+';体重:'+person[3]}}</span>
+        <!--ng-bind方式实现相同的效果-->
+        <p ng-bind="'姓名:'+person[0]+';年龄:'+person[1]+';身高：'+person[2]+';体重:'+person[3]"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // var x = 999;
+
+        // function add() {
+        //     console.log(x);
+        // }
+
+        // add();  //999;
+    </script>
+
+    <script>
+        // function fun(){
+        //     var x=8;
+        // }
+        // console.log(x); //闭包.html:23 Uncaught ReferenceError: x is not defined
+    </script>
+
+    <!--<script>
+        function fun() {
+            var x = 5;
+            console.log(y); //Uncaught ReferenceError: y is not defined
+            function insideFun() {
+                var y = 10;
+                console.log(x); //5
+            }
+
+            insideFun();
+        }
+        fun();
+    </script>-->
+
+    <script>
+        // function f1() {
+        //     var x = 5;
+        //     var y = 8;
+        //     function f2() {
+        //         console.log(x); //undefined
+        //         console.log(y); //8
+        //         var x = 20;
+        //     }
+        //     f2();
+        // }
+
+        // f1();
+
+        // //相当于
+
+        // function f1() {
+        //     var x = 5;
+        //     var y = 8;
+        //     function f2() {
+        //         var x;
+        //         console.log(x); //undefined
+        //         console.log(y); //8
+        //         x = 20;
+        //     }
+        //     f2();
+        // }
+
+        // f1();
+    </script>
+
+    <script>
+        // function f1() {
+        //     var n = 999;
+        //     function f2() {
+        //         console.log(n);
+        //     }
+        //     return f2;
+        // }
+
+        // var result = f1();
+        // result();   //999
+    </script>
+
+
+    <script>
+        // 写法一
+        var tmp = newData;
+        processData(tmp);
+        storeData(tmp);
+
+        // 写法二
+        (function () {
+            var tmp = newData;
+            processData(tmp);
+            storeData(tmp);
+        }());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

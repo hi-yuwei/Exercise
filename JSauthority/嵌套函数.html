@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套函数调用上下文</title>
+<!--    <script>
+//        嵌套函数当做普通函数使用
+        function add(){
+            console.log(1);
+            function say(){
+                console.log(this);  //指向window
+            }
+            say();
+        }
+        add();
+    </script>
+    <script>
+        //嵌套函数在方法中
+        var person={
+            name:"beck",
+            width:"178cm",
+            height:"65kg",
+            say:function(){
+                console.log(this.name+this.width+this.height);  //指向person
+                function chi(){
+                    console.log(this);  //指向window
+                    console.log(this.name+"吃东西...");
+                }
+                chi();
+            }
+        }
+        person.say();
+    </script>-->
+    <script>
+        var person={
+            name:"beck",
+            width:"178cm",
+            height:"65kg",
+            say:function(){
+                var self=this;
+                console.log(this.name+this.width+this.height);  //指向person
+                function chi(){
+                    console.log(self);  //person
+                    console.log(self.name+"吃东西...");    //beck吃东西...
+                }
+                chi();
+            }
+        }
+        person.say();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

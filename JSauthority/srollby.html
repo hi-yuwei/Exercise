@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrollby</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div.box {
+            height: 1000px;
+        }
+
+        .box1 {
+            background: palevioletred;
+        }
+
+        .box2 {
+            background: cornflowerblue;
+        }
+
+        .box3 {
+            background: orange;
+        }
+
+        .box4 {
+            background: darkgreen;
+        }
+
+        .box5 {
+            background: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<div class="box box5"></div>
+<script>
+    //每隔1s在现有滚动条偏移量上+500
+    var timer = setInterval(function () {
+        if (document.documentElement.offsetHeight === (document.documentElement.scrollTop + window.innerHeight)) {
+            //滚动到底部时,清除定时器
+            clearInterval(timer);
+        }
+        window.scrollBy(0, 500);
+    }, 1000)
+
+</script>
+</body>
+</html>

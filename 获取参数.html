@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提取url参数</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>
+    <script>
+        /*
+         * 提取url参数
+         * 1、传入参数，获取参数部分
+         * 2、根据&进行分割为数组
+         * 3、循环每个数组元素，再根据=进行分割为数组
+         * 4、传入到对象里
+         * */
+        function parseUrlParameter(url) {
+            var satrtIndex = url.indexOf('?');
+            if (satrtIndex !== -1) {
+                var obj = {};
+                var arr = url.substring(satrtIndex + 1).split('&');
+                for (var i = 0; i < arr.length; i++) {
+                    var par = arr[i].split('=');
+                    obj[par[0]] = par[1];
+                }
+                return obj;
+            }
+        }
+        //        var url='http://localhost:63343/Code/%E8%8E%B7%E5%8F%96%E5%8F%82%E6%95%B0.html?type=txt&name=beck&age=28&width=170';
+        var url = location.search;  //获得url参数部分
+        console.log(parseUrlParameter(url))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

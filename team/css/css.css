@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrap{
+    width:1859px;
+    margin:0 auto;
+    font-family: '微软雅黑';
+    background: #F7F7F7;
+}
+.wrap .stylist{
+    position: relative;
+    width:300px;
+    height:509px;
+    padding:200px;
+    margin-right: 18px;
+    background: #A78F85;
+}
+.wrap .stylist .stylist-box{
+    padding:10px;
+    overflow: hidden;
+}
+.wrap .stylist .stylist-box .name{
+    font-size:18px;
+}
+.wrap .stylist .stylist-box .name span{
+    font-size:14px;
+}
+.wrap .stylist .stylist-box>div{
+    float: left;
+    text-align: center;
+    color:#fff;
+}
+.wrap .stylist .stylist-box .about{
+    text-align: left;
+}
+.wrap .stylist .decorate{
+    position: absolute;
+    top:307px;
+    right:-5px;
+    width:34px;
+    height:34px;
+    transform: rotate(45deg);
+    background: #A78F85;
+}
+.wrap .stylist .amount{
+    position: absolute;
+    bottom: 55px;
+    right: 40px;
+    color:#fff;
+}
+.wrap .case{
+    width:1141px;
+    height:909px;
+    background: #fff;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery-1.8.2.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul li{
+            list-style: none;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .clearfix::before{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .nav li{
+            padding:20px;
+            float: left;
+            margin-right:20px;
+            cursor: pointer;
+        }
+        .nav .sel{
+            position: absolute;
+            top:0;
+            height:60px;
+            font-style: normal;
+            border:1px solid #000;
+            border-radius: 10px;
+            transition: all .3s linear 0s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <i class="sel"></i>
+    <ul class="clearfix">
+        <li class="on">Home</li>
+        <li  >Case</li>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>MALL</li>
+    </ul>
+</div>
+<script>
+    $(function () {
+
+        //打开页面就获取当前选中的li的索引
+        var index=$('.nav li.on').index();
+
+
+        setLeft(index);
+
+        //核心
+        function setLeft(index){
+            var iLeft=0,iWidth=0;   //初始化选框的left和宽度
+            var iWidth=$('.nav li').eq(index).outerWidth(); //获得当前选框的宽度，不包含margin值
+
+            //获得当前li之前的li的宽度（包含外边距）
+            for(var i=index-1;i>=0;i--){
+                iLeft+= $('.nav li').eq(i).outerWidth(true);
+            }
+
+            //设置选中框的left值和宽度
+            $('.sel').css({
+                left:iLeft,
+                width:iWidth
+            })
+        }
+
+
+        $('.nav li').mouseover(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+            setLeft($(this).index());
+        })
+    })
+</script>
+</body>
+</html>

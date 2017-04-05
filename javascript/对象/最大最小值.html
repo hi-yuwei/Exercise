@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最大最小值</title>
+    <script type="text/javascript">
+        var x=Math.max(1,2,3);
+        console.log(x); //最大值
+        var y=Math.min(5,9,1);
+        console.log(y); //最小值
+        //以上方法是无法判断数组中的最大，最小值的
+
+        var arr=[12,4,9,19,10,22];
+        var maxNumber=Math.max.apply(Math,arr); //最大值
+        var minNumber=Math.min.apply(Math,arr); //最小值
+        console.log("最大值"+maxNumber);   //22
+        console.log("最小值"+minNumber);   //4
+    </script>
+</head>
+<body>
+
+</body>
+</html>

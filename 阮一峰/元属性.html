@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--<script>
+        var obj = {
+            name: 'beck',
+            age: 29,
+            sex: '男'
+        };
+        Object.defineProperty(obj, 'sex', {
+            enumerable: false
+        });
+        for (var key in obj) {
+            console.log(key); //name,age
+        }
+    </script>-->
+
+    <!--<script>
+        var obj = Object.defineProperties({}, {
+            name: {
+                value: 'yw',
+                writable: true,
+                enumerable: true,
+                configurable: true
+            },
+            age: {
+                value: 29,
+                writable: false,
+                enumerable: true,
+                configurable: true
+            }
+        });
+
+        var o = obj;
+        console.log(o.name); //'yw'
+        console.log(o.age); //29
+
+        o.age = 32;
+        console.log(o.age); //29
+    </script>-->
+
+    <script>
+        // //直接定义
+        // var obj = {
+        //     name: 'beck'
+        // };
+
+        // //存取器定义
+        // var arr = {
+        //     say: 'hi',
+        //     get p() {
+        //         return this.say;
+        //     },
+        //     set p(value) {
+        //         this.say += value;
+        //     }
+        // }
+
+        // arr.p = 'yu';
+        // console.log(arr.p); //'hiyu'
+    </script>
+
+    <script>
+        // 对象拷贝方法
+        //先判断原生对象是否有这个方法，通过defineProperty方法设置该方法不能被遍历
+        if (!Object.prototype['copy']) {
+            Object.defineProperty(Object.prototype, 'copy', {
+                value: function(from) {
+                    for (var key in from) {
+                        this[key] = from[key];
+                    }
+                },
+                writable: false,
+                enumerable: false,
+                configurable: true
+            })
+        }
+
+        var obj = {
+            name: 'yu',
+            age: 20
+        };
+
+        var aa = {};
+        aa.copy(obj);
+        for (var key in aa) {
+            console.log(key);
+        }
+    </script>
+</body>
+
+</html>

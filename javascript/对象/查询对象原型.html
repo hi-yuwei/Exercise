@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询对象的原型</title>
+    <script type="text/javascript">
+        var x={a:1,b:2};    //x继承与Object
+        var y=Object.create(x); //y继承与x
+        y.name="beck";
+        var z=Object.create(y); //z继承与y
+        console.log(Object.getPrototypeOf(z));  //Object {name: "beck"},可以看出其是继承于y
+    </script>
+</head>
+<body>
+
+</body>
+</html>
